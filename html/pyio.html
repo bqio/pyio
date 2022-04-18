@@ -1,0 +1,2363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>pyio API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>pyio</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from struct import pack, unpack
+from io import BufferedIOBase
+
+
+class MemoryReader:
+    &#34;&#34;&#34;
+    Simple memory reader.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer: bytes, endian=&#34;&lt;&#34;) -&gt; None:
+        &#34;&#34;&#34;
+        Args:
+            buffer (bytes): Bytes array.
+            endian (str): Bytes endian.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.buffer = buffer
+        self.endian = endian
+        self.offset = 0
+
+    def read(self, count: int) -&gt; bytes:
+        &#34;&#34;&#34;
+        Read bytes from buffer.
+
+        Args:
+            count (int): Bytes count.
+        Returns:
+            bytes: Bytes array.
+        &#34;&#34;&#34;
+        buf = self.buffer[self.offset:self.offset + count]
+        self.offset += count
+        return buf
+
+    def read_i8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit signed integer from buffer.
+
+        Returns:
+            int: 8-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;b&#34;, buf)[0]
+
+    def read_i16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit signed integer from buffer.
+
+        Returns:
+            int: 16-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;h&#34;, buf)[0]
+
+    def read_i32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit signed integer from buffer.
+
+        Returns:
+            int: 32-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;i&#34;, buf)[0]
+
+    def read_i64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit signed integer from buffer.
+
+        Returns:
+            int: 64-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;q&#34;, buf)[0]
+
+    def read_u8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit unsigned integer from buffer.
+
+        Returns:
+            int: 8-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;B&#34;, buf)[0]
+
+    def read_u16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit unsigned integer from buffer.
+
+        Returns:
+            int: 16-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;H&#34;, buf)[0]
+
+    def read_u32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit unsigned integer from buffer.
+
+        Returns:
+            int: 32-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;I&#34;, buf)[0]
+
+    def read_u64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit unsigned integer from buffer.
+
+        Returns:
+            int: 64-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;Q&#34;, buf)[0]
+
+    def read_str(self, length: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 string from buffer.
+
+        Args:
+            length (int): String length.
+
+        Returns:
+            str: UTF-8 string.
+        &#34;&#34;&#34;
+        return self.read(length).decode(&#39;utf-8&#39;)
+
+    def read_strz(self, terminator: int = 0) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 null terminated string from buffer.
+
+        Args:
+            terminator (int): Null character.
+
+        Returns:
+            str: UTF-8 string.
+        &#34;&#34;&#34;
+        str_length = 0
+        pos = self.tell()
+        while self.read_i8() != terminator:
+            str_length += 1
+        self.seek(pos)
+        line = self.read_str(str_length)
+        self.skip(1)
+        return line
+
+    def seek(self, offset: int):
+        &#34;&#34;&#34;
+        Set offset in buffer.
+
+        Args:
+            offset (int): Offset in buffer.
+        &#34;&#34;&#34;
+        self.offset = offset
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset in buffer.
+
+        Returns:
+            int: Offset in buffer.
+        &#34;&#34;&#34;
+        return self.offset
+
+    def skip(self, count: int):
+        &#34;&#34;&#34;
+        Skip bytes in buffer.
+
+        Args:
+            count (int): Bytes count.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.seek(self.tell() + count)
+
+
+class MemoryWriter:
+    &#34;&#34;&#34;
+    Simple memory writer.
+    &#34;&#34;&#34;
+
+    def __init__(self, endian=&#34;&lt;&#34;):
+        &#34;&#34;&#34;
+        Args:
+            endian (str): Bytes endian.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.endian = endian
+        self.buffer = bytes()
+
+    def write(self, data: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write bytes into buffer.
+        &#34;&#34;&#34;
+        self.buffer += data
+
+    def write_i8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;b&#34;, data)
+        self.write(buf)
+
+    def write_i16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;h&#34;, data)
+        self.write(buf)
+
+    def write_i32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;i&#34;, data)
+        self.write(buf)
+
+    def write_i64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;q&#34;, data)
+        self.write(buf)
+
+    def write_u8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;B&#34;, data)
+        self.write(buf)
+
+    def write_u16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;H&#34;, data)
+        self.write(buf)
+
+    def write_u32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;I&#34;, data)
+        self.write(buf)
+
+    def write_u64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;Q&#34;, data)
+        self.write(buf)
+
+    def write_str(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+
+    def write_strz(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string with null terminated byte into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+        self.write_i8(0)
+
+
+class Writer:
+    &#34;&#34;&#34;
+    Simple writer class.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer, endian=&#34;&lt;&#34;) -&gt; None:
+        self.buffer = buffer
+        self.endian = endian
+
+    def write(self, buf: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write bytes into buffer.
+        &#34;&#34;&#34;
+        self.buffer.write(buf)
+
+    def write_i8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;b&#34;, data)
+        self.write(buf)
+
+    def write_i16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;h&#34;, data)
+        self.write(buf)
+
+    def write_i32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;i&#34;, data)
+        self.write(buf)
+
+    def write_i64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;q&#34;, data)
+        self.write(buf)
+
+    def write_u8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;B&#34;, data)
+        self.write(buf)
+
+    def write_u16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;H&#34;, data)
+        self.write(buf)
+
+    def write_u32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;I&#34;, data)
+        self.write(buf)
+
+    def write_u64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;Q&#34;, data)
+        self.write(buf)
+
+    def write_str(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+
+    def write_strz(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string with null terminated byte into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+        self.write_i8(0)
+
+    def skip(self, count: int) -&gt; None:
+        &#34;&#34;&#34;
+        Skip (fill) bytes in buffer.
+        &#34;&#34;&#34;
+        for _ in range(count):
+            self.write_i8(0)
+
+    def seek(self, offset: int) -&gt; None:
+        &#34;&#34;&#34;
+        Set offset in buffer.
+        &#34;&#34;&#34;
+        self.buffer.seek(offset)
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset from buffer.
+        &#34;&#34;&#34;
+        return self.buffer.tell()
+
+    def close(self) -&gt; None:
+        &#34;&#34;&#34;
+        Close writer.
+        &#34;&#34;&#34;
+        self.buffer.close()
+
+    @staticmethod
+    def into_file(filename, buffer: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write buffer into file.
+        &#34;&#34;&#34;
+        with open(filename, &#34;wb&#34;) as f:
+            f.write(buffer)
+
+
+class Reader:
+    &#34;&#34;&#34;
+    Simple memory reader.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer: BufferedIOBase, endian=&#34;&lt;&#34;) -&gt; None:
+        self.buffer = buffer
+        self.endian = endian
+
+    def close(self) -&gt; None:
+        &#34;&#34;&#34;
+        Close reader.
+        &#34;&#34;&#34;
+        self.buffer.close()
+
+    def read(self, count: int) -&gt; bytes:
+        &#34;&#34;&#34;
+        Read bytes from buffer.
+
+        Args:
+            count (int): Bytes count.
+
+        Returns:
+            bytes: Bytes array.
+        &#34;&#34;&#34;
+        return self.buffer.read(count)
+
+    def read_i8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;b&#34;, buf)[0]
+
+    def read_i16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;h&#34;, buf)[0]
+
+    def read_i32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;i&#34;, buf)[0]
+
+    def read_i64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;q&#34;, buf)[0]
+
+    def read_u8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;B&#34;, buf)[0]
+
+    def read_u16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;H&#34;, buf)[0]
+
+    def read_u32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;I&#34;, buf)[0]
+
+    def read_u64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;Q&#34;, buf)[0]
+
+    def read_str(self, size: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 string from buffer.
+        &#34;&#34;&#34;
+        return self.read(size).decode(&#39;utf-8&#39;)
+
+    def read_str_xor(self, size: int, xor: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 XOR string from buffer.
+        &#34;&#34;&#34;
+        return bytes(list(map(lambda n: n ^ xor, list(self.read(size))))).decode(&#39;utf-8&#39;)
+
+    def read_strz(self, terminator: int = 0) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 null terminated string from buffer.
+        &#34;&#34;&#34;
+        str_length = 0
+        pos = self.tell()
+        while self.read_i8() != terminator:
+            str_length += 1
+        self.seek(pos)
+        line = self.read_str(str_length)
+        self.skip(1)
+        return line
+
+    def seek(self, offset: int) -&gt; None:
+        &#34;&#34;&#34;
+        Set offset in buffer.
+        &#34;&#34;&#34;
+        self.buffer.seek(offset)
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset from buffer.
+        &#34;&#34;&#34;
+        return self.buffer.tell()
+
+    def skip(self, count: int) -&gt; None:
+        &#34;&#34;&#34;
+        Skip bytes in buffer.
+        &#34;&#34;&#34;
+        self.seek(self.tell() + count)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="pyio.MemoryReader"><code class="flex name class">
+<span>class <span class="ident">MemoryReader</span></span>
+<span>(</span><span>buffer: bytes, endian=&#x27;&lt;&#x27;)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simple memory reader.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>buffer</code></strong> :&ensp;<code>bytes</code></dt>
+<dd>Bytes array.</dd>
+<dt><strong><code>endian</code></strong> :&ensp;<code>str</code></dt>
+<dd>Bytes endian.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MemoryReader:
+    &#34;&#34;&#34;
+    Simple memory reader.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer: bytes, endian=&#34;&lt;&#34;) -&gt; None:
+        &#34;&#34;&#34;
+        Args:
+            buffer (bytes): Bytes array.
+            endian (str): Bytes endian.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.buffer = buffer
+        self.endian = endian
+        self.offset = 0
+
+    def read(self, count: int) -&gt; bytes:
+        &#34;&#34;&#34;
+        Read bytes from buffer.
+
+        Args:
+            count (int): Bytes count.
+        Returns:
+            bytes: Bytes array.
+        &#34;&#34;&#34;
+        buf = self.buffer[self.offset:self.offset + count]
+        self.offset += count
+        return buf
+
+    def read_i8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit signed integer from buffer.
+
+        Returns:
+            int: 8-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;b&#34;, buf)[0]
+
+    def read_i16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit signed integer from buffer.
+
+        Returns:
+            int: 16-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;h&#34;, buf)[0]
+
+    def read_i32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit signed integer from buffer.
+
+        Returns:
+            int: 32-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;i&#34;, buf)[0]
+
+    def read_i64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit signed integer from buffer.
+
+        Returns:
+            int: 64-bit signed integer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;q&#34;, buf)[0]
+
+    def read_u8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit unsigned integer from buffer.
+
+        Returns:
+            int: 8-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;B&#34;, buf)[0]
+
+    def read_u16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit unsigned integer from buffer.
+
+        Returns:
+            int: 16-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;H&#34;, buf)[0]
+
+    def read_u32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit unsigned integer from buffer.
+
+        Returns:
+            int: 32-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;I&#34;, buf)[0]
+
+    def read_u64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit unsigned integer from buffer.
+
+        Returns:
+            int: 64-bit unsigned integer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;Q&#34;, buf)[0]
+
+    def read_str(self, length: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 string from buffer.
+
+        Args:
+            length (int): String length.
+
+        Returns:
+            str: UTF-8 string.
+        &#34;&#34;&#34;
+        return self.read(length).decode(&#39;utf-8&#39;)
+
+    def read_strz(self, terminator: int = 0) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 null terminated string from buffer.
+
+        Args:
+            terminator (int): Null character.
+
+        Returns:
+            str: UTF-8 string.
+        &#34;&#34;&#34;
+        str_length = 0
+        pos = self.tell()
+        while self.read_i8() != terminator:
+            str_length += 1
+        self.seek(pos)
+        line = self.read_str(str_length)
+        self.skip(1)
+        return line
+
+    def seek(self, offset: int):
+        &#34;&#34;&#34;
+        Set offset in buffer.
+
+        Args:
+            offset (int): Offset in buffer.
+        &#34;&#34;&#34;
+        self.offset = offset
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset in buffer.
+
+        Returns:
+            int: Offset in buffer.
+        &#34;&#34;&#34;
+        return self.offset
+
+    def skip(self, count: int):
+        &#34;&#34;&#34;
+        Skip bytes in buffer.
+
+        Args:
+            count (int): Bytes count.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.seek(self.tell() + count)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="pyio.MemoryReader.read"><code class="name flex">
+<span>def <span class="ident">read</span></span>(<span>self, count: int) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read bytes from buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>count</code></strong> :&ensp;<code>int</code></dt>
+<dd>Bytes count.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Bytes array.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read(self, count: int) -&gt; bytes:
+    &#34;&#34;&#34;
+    Read bytes from buffer.
+
+    Args:
+        count (int): Bytes count.
+    Returns:
+        bytes: Bytes array.
+    &#34;&#34;&#34;
+    buf = self.buffer[self.offset:self.offset + count]
+    self.offset += count
+    return buf</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_i8"><code class="name flex">
+<span>def <span class="ident">read_i8</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 8-bit signed integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>8-bit signed integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i8(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 8-bit signed integer from buffer.
+
+    Returns:
+        int: 8-bit signed integer.
+    &#34;&#34;&#34;
+    buf = self.read(1)
+    return unpack(self.endian + &#34;b&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_i16"><code class="name flex">
+<span>def <span class="ident">read_i16</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 16-bit signed integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>16-bit signed integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i16(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 16-bit signed integer from buffer.
+
+    Returns:
+        int: 16-bit signed integer.
+    &#34;&#34;&#34;
+    buf = self.read(2)
+    return unpack(self.endian + &#34;h&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_i32"><code class="name flex">
+<span>def <span class="ident">read_i32</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 32-bit signed integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>32-bit signed integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i32(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 32-bit signed integer from buffer.
+
+    Returns:
+        int: 32-bit signed integer.
+    &#34;&#34;&#34;
+    buf = self.read(4)
+    return unpack(self.endian + &#34;i&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_i64"><code class="name flex">
+<span>def <span class="ident">read_i64</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 64-bit signed integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>64-bit signed integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i64(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 64-bit signed integer from buffer.
+
+    Returns:
+        int: 64-bit signed integer.
+    &#34;&#34;&#34;
+    buf = self.read(8)
+    return unpack(self.endian + &#34;q&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_u8"><code class="name flex">
+<span>def <span class="ident">read_u8</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 8-bit unsigned integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>8-bit unsigned integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u8(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 8-bit unsigned integer from buffer.
+
+    Returns:
+        int: 8-bit unsigned integer.
+    &#34;&#34;&#34;
+    buf = self.read(1)
+    return unpack(self.endian + &#34;B&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_u16"><code class="name flex">
+<span>def <span class="ident">read_u16</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 16-bit unsigned integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>16-bit unsigned integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u16(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 16-bit unsigned integer from buffer.
+
+    Returns:
+        int: 16-bit unsigned integer.
+    &#34;&#34;&#34;
+    buf = self.read(2)
+    return unpack(self.endian + &#34;H&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_u32"><code class="name flex">
+<span>def <span class="ident">read_u32</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 32-bit unsigned integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>32-bit unsigned integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u32(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 32-bit unsigned integer from buffer.
+
+    Returns:
+        int: 32-bit unsigned integer.
+    &#34;&#34;&#34;
+    buf = self.read(4)
+    return unpack(self.endian + &#34;I&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_u64"><code class="name flex">
+<span>def <span class="ident">read_u64</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 64-bit unsigned integer from buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>64-bit unsigned integer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u64(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 64-bit unsigned integer from buffer.
+
+    Returns:
+        int: 64-bit unsigned integer.
+    &#34;&#34;&#34;
+    buf = self.read(8)
+    return unpack(self.endian + &#34;Q&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_str"><code class="name flex">
+<span>def <span class="ident">read_str</span></span>(<span>self, length: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read UTF-8 string from buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>length</code></strong> :&ensp;<code>int</code></dt>
+<dd>String length.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>UTF-8 string.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_str(self, length: int) -&gt; str:
+    &#34;&#34;&#34;
+    Read UTF-8 string from buffer.
+
+    Args:
+        length (int): String length.
+
+    Returns:
+        str: UTF-8 string.
+    &#34;&#34;&#34;
+    return self.read(length).decode(&#39;utf-8&#39;)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.read_strz"><code class="name flex">
+<span>def <span class="ident">read_strz</span></span>(<span>self, terminator: int = 0) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read UTF-8 null terminated string from buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>terminator</code></strong> :&ensp;<code>int</code></dt>
+<dd>Null character.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>UTF-8 string.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_strz(self, terminator: int = 0) -&gt; str:
+    &#34;&#34;&#34;
+    Read UTF-8 null terminated string from buffer.
+
+    Args:
+        terminator (int): Null character.
+
+    Returns:
+        str: UTF-8 string.
+    &#34;&#34;&#34;
+    str_length = 0
+    pos = self.tell()
+    while self.read_i8() != terminator:
+        str_length += 1
+    self.seek(pos)
+    line = self.read_str(str_length)
+    self.skip(1)
+    return line</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.seek"><code class="name flex">
+<span>def <span class="ident">seek</span></span>(<span>self, offset: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set offset in buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>offset</code></strong> :&ensp;<code>int</code></dt>
+<dd>Offset in buffer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def seek(self, offset: int):
+    &#34;&#34;&#34;
+    Set offset in buffer.
+
+    Args:
+        offset (int): Offset in buffer.
+    &#34;&#34;&#34;
+    self.offset = offset</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.tell"><code class="name flex">
+<span>def <span class="ident">tell</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get offset in buffer.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Offset in buffer.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tell(self) -&gt; int:
+    &#34;&#34;&#34;
+    Get offset in buffer.
+
+    Returns:
+        int: Offset in buffer.
+    &#34;&#34;&#34;
+    return self.offset</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryReader.skip"><code class="name flex">
+<span>def <span class="ident">skip</span></span>(<span>self, count: int)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Skip bytes in buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>count</code></strong> :&ensp;<code>int</code></dt>
+<dd>Bytes count.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def skip(self, count: int):
+    &#34;&#34;&#34;
+    Skip bytes in buffer.
+
+    Args:
+        count (int): Bytes count.
+
+    Returns:
+        None
+    &#34;&#34;&#34;
+    self.seek(self.tell() + count)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="pyio.MemoryWriter"><code class="flex name class">
+<span>class <span class="ident">MemoryWriter</span></span>
+<span>(</span><span>endian=&#x27;&lt;&#x27;)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simple memory writer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>endian</code></strong> :&ensp;<code>str</code></dt>
+<dd>Bytes endian.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MemoryWriter:
+    &#34;&#34;&#34;
+    Simple memory writer.
+    &#34;&#34;&#34;
+
+    def __init__(self, endian=&#34;&lt;&#34;):
+        &#34;&#34;&#34;
+        Args:
+            endian (str): Bytes endian.
+
+        Returns:
+            None
+        &#34;&#34;&#34;
+        self.endian = endian
+        self.buffer = bytes()
+
+    def write(self, data: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write bytes into buffer.
+        &#34;&#34;&#34;
+        self.buffer += data
+
+    def write_i8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;b&#34;, data)
+        self.write(buf)
+
+    def write_i16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;h&#34;, data)
+        self.write(buf)
+
+    def write_i32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;i&#34;, data)
+        self.write(buf)
+
+    def write_i64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;q&#34;, data)
+        self.write(buf)
+
+    def write_u8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;B&#34;, data)
+        self.write(buf)
+
+    def write_u16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;H&#34;, data)
+        self.write(buf)
+
+    def write_u32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;I&#34;, data)
+        self.write(buf)
+
+    def write_u64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;Q&#34;, data)
+        self.write(buf)
+
+    def write_str(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+
+    def write_strz(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string with null terminated byte into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+        self.write_i8(0)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="pyio.MemoryWriter.write"><code class="name flex">
+<span>def <span class="ident">write</span></span>(<span>self, data: bytes) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write bytes into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write(self, data: bytes) -&gt; None:
+    &#34;&#34;&#34;
+    Write bytes into buffer.
+    &#34;&#34;&#34;
+    self.buffer += data</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_i8"><code class="name flex">
+<span>def <span class="ident">write_i8</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 8-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i8(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 8-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;b&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_i16"><code class="name flex">
+<span>def <span class="ident">write_i16</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 16-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i16(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 16-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;h&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_i32"><code class="name flex">
+<span>def <span class="ident">write_i32</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 32-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i32(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 32-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;i&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_i64"><code class="name flex">
+<span>def <span class="ident">write_i64</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 64-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i64(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 64-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;q&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_u8"><code class="name flex">
+<span>def <span class="ident">write_u8</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 8-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u8(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 8-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;B&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_u16"><code class="name flex">
+<span>def <span class="ident">write_u16</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 16-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u16(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 16-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;H&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_u32"><code class="name flex">
+<span>def <span class="ident">write_u32</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 32-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u32(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 32-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;I&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_u64"><code class="name flex">
+<span>def <span class="ident">write_u64</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 64-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u64(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 64-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;Q&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_str"><code class="name flex">
+<span>def <span class="ident">write_str</span></span>(<span>self, data: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write UTF-8 string into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_str(self, data: str) -&gt; None:
+    &#34;&#34;&#34;
+    Write UTF-8 string into buffer.
+    &#34;&#34;&#34;
+    buf = data.encode(&#39;utf-8&#39;)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.MemoryWriter.write_strz"><code class="name flex">
+<span>def <span class="ident">write_strz</span></span>(<span>self, data: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write UTF-8 string with null terminated byte into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_strz(self, data: str) -&gt; None:
+    &#34;&#34;&#34;
+    Write UTF-8 string with null terminated byte into buffer.
+    &#34;&#34;&#34;
+    buf = data.encode(&#39;utf-8&#39;)
+    self.write(buf)
+    self.write_i8(0)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="pyio.Writer"><code class="flex name class">
+<span>class <span class="ident">Writer</span></span>
+<span>(</span><span>buffer, endian=&#x27;&lt;&#x27;)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simple writer class.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Writer:
+    &#34;&#34;&#34;
+    Simple writer class.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer, endian=&#34;&lt;&#34;) -&gt; None:
+        self.buffer = buffer
+        self.endian = endian
+
+    def write(self, buf: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write bytes into buffer.
+        &#34;&#34;&#34;
+        self.buffer.write(buf)
+
+    def write_i8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;b&#34;, data)
+        self.write(buf)
+
+    def write_i16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;h&#34;, data)
+        self.write(buf)
+
+    def write_i32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;i&#34;, data)
+        self.write(buf)
+
+    def write_i64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit signed integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;q&#34;, data)
+        self.write(buf)
+
+    def write_u8(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 8-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;B&#34;, data)
+        self.write(buf)
+
+    def write_u16(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 16-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;H&#34;, data)
+        self.write(buf)
+
+    def write_u32(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 32-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;I&#34;, data)
+        self.write(buf)
+
+    def write_u64(self, data: int) -&gt; None:
+        &#34;&#34;&#34;
+        Write 64-bit unsigned integer into buffer.
+        &#34;&#34;&#34;
+        buf = pack(self.endian + &#34;Q&#34;, data)
+        self.write(buf)
+
+    def write_str(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+
+    def write_strz(self, data: str) -&gt; None:
+        &#34;&#34;&#34;
+        Write UTF-8 string with null terminated byte into buffer.
+        &#34;&#34;&#34;
+        buf = data.encode(&#39;utf-8&#39;)
+        self.write(buf)
+        self.write_i8(0)
+
+    def skip(self, count: int) -&gt; None:
+        &#34;&#34;&#34;
+        Skip (fill) bytes in buffer.
+        &#34;&#34;&#34;
+        for _ in range(count):
+            self.write_i8(0)
+
+    def seek(self, offset: int) -&gt; None:
+        &#34;&#34;&#34;
+        Set offset in buffer.
+        &#34;&#34;&#34;
+        self.buffer.seek(offset)
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset from buffer.
+        &#34;&#34;&#34;
+        return self.buffer.tell()
+
+    def close(self) -&gt; None:
+        &#34;&#34;&#34;
+        Close writer.
+        &#34;&#34;&#34;
+        self.buffer.close()
+
+    @staticmethod
+    def into_file(filename, buffer: bytes) -&gt; None:
+        &#34;&#34;&#34;
+        Write buffer into file.
+        &#34;&#34;&#34;
+        with open(filename, &#34;wb&#34;) as f:
+            f.write(buffer)</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="pyio.Writer.into_file"><code class="name flex">
+<span>def <span class="ident">into_file</span></span>(<span>filename, buffer: bytes) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write buffer into file.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@staticmethod
+def into_file(filename, buffer: bytes) -&gt; None:
+    &#34;&#34;&#34;
+    Write buffer into file.
+    &#34;&#34;&#34;
+    with open(filename, &#34;wb&#34;) as f:
+        f.write(buffer)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="pyio.Writer.write"><code class="name flex">
+<span>def <span class="ident">write</span></span>(<span>self, buf: bytes) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write bytes into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write(self, buf: bytes) -&gt; None:
+    &#34;&#34;&#34;
+    Write bytes into buffer.
+    &#34;&#34;&#34;
+    self.buffer.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_i8"><code class="name flex">
+<span>def <span class="ident">write_i8</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 8-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i8(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 8-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;b&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_i16"><code class="name flex">
+<span>def <span class="ident">write_i16</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 16-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i16(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 16-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;h&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_i32"><code class="name flex">
+<span>def <span class="ident">write_i32</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 32-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i32(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 32-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;i&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_i64"><code class="name flex">
+<span>def <span class="ident">write_i64</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 64-bit signed integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_i64(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 64-bit signed integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;q&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_u8"><code class="name flex">
+<span>def <span class="ident">write_u8</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 8-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u8(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 8-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;B&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_u16"><code class="name flex">
+<span>def <span class="ident">write_u16</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 16-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u16(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 16-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;H&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_u32"><code class="name flex">
+<span>def <span class="ident">write_u32</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 32-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u32(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 32-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;I&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_u64"><code class="name flex">
+<span>def <span class="ident">write_u64</span></span>(<span>self, data: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write 64-bit unsigned integer into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_u64(self, data: int) -&gt; None:
+    &#34;&#34;&#34;
+    Write 64-bit unsigned integer into buffer.
+    &#34;&#34;&#34;
+    buf = pack(self.endian + &#34;Q&#34;, data)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_str"><code class="name flex">
+<span>def <span class="ident">write_str</span></span>(<span>self, data: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write UTF-8 string into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_str(self, data: str) -&gt; None:
+    &#34;&#34;&#34;
+    Write UTF-8 string into buffer.
+    &#34;&#34;&#34;
+    buf = data.encode(&#39;utf-8&#39;)
+    self.write(buf)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.write_strz"><code class="name flex">
+<span>def <span class="ident">write_strz</span></span>(<span>self, data: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Write UTF-8 string with null terminated byte into buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def write_strz(self, data: str) -&gt; None:
+    &#34;&#34;&#34;
+    Write UTF-8 string with null terminated byte into buffer.
+    &#34;&#34;&#34;
+    buf = data.encode(&#39;utf-8&#39;)
+    self.write(buf)
+    self.write_i8(0)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.skip"><code class="name flex">
+<span>def <span class="ident">skip</span></span>(<span>self, count: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Skip (fill) bytes in buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def skip(self, count: int) -&gt; None:
+    &#34;&#34;&#34;
+    Skip (fill) bytes in buffer.
+    &#34;&#34;&#34;
+    for _ in range(count):
+        self.write_i8(0)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.seek"><code class="name flex">
+<span>def <span class="ident">seek</span></span>(<span>self, offset: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set offset in buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def seek(self, offset: int) -&gt; None:
+    &#34;&#34;&#34;
+    Set offset in buffer.
+    &#34;&#34;&#34;
+    self.buffer.seek(offset)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.tell"><code class="name flex">
+<span>def <span class="ident">tell</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get offset from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tell(self) -&gt; int:
+    &#34;&#34;&#34;
+    Get offset from buffer.
+    &#34;&#34;&#34;
+    return self.buffer.tell()</code></pre>
+</details>
+</dd>
+<dt id="pyio.Writer.close"><code class="name flex">
+<span>def <span class="ident">close</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Close writer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close(self) -&gt; None:
+    &#34;&#34;&#34;
+    Close writer.
+    &#34;&#34;&#34;
+    self.buffer.close()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="pyio.Reader"><code class="flex name class">
+<span>class <span class="ident">Reader</span></span>
+<span>(</span><span>buffer: io.BufferedIOBase, endian=&#x27;&lt;&#x27;)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simple memory reader.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Reader:
+    &#34;&#34;&#34;
+    Simple memory reader.
+    &#34;&#34;&#34;
+
+    def __init__(self, buffer: BufferedIOBase, endian=&#34;&lt;&#34;) -&gt; None:
+        self.buffer = buffer
+        self.endian = endian
+
+    def close(self) -&gt; None:
+        &#34;&#34;&#34;
+        Close reader.
+        &#34;&#34;&#34;
+        self.buffer.close()
+
+    def read(self, count: int) -&gt; bytes:
+        &#34;&#34;&#34;
+        Read bytes from buffer.
+
+        Args:
+            count (int): Bytes count.
+
+        Returns:
+            bytes: Bytes array.
+        &#34;&#34;&#34;
+        return self.buffer.read(count)
+
+    def read_i8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;b&#34;, buf)[0]
+
+    def read_i16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;h&#34;, buf)[0]
+
+    def read_i32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;i&#34;, buf)[0]
+
+    def read_i64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit signed integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;q&#34;, buf)[0]
+
+    def read_u8(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 8-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(1)
+        return unpack(self.endian + &#34;B&#34;, buf)[0]
+
+    def read_u16(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 16-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(2)
+        return unpack(self.endian + &#34;H&#34;, buf)[0]
+
+    def read_u32(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 32-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(4)
+        return unpack(self.endian + &#34;I&#34;, buf)[0]
+
+    def read_u64(self) -&gt; int:
+        &#34;&#34;&#34;
+        Read 64-bit unsigned integer from buffer.
+        &#34;&#34;&#34;
+        buf = self.read(8)
+        return unpack(self.endian + &#34;Q&#34;, buf)[0]
+
+    def read_str(self, size: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 string from buffer.
+        &#34;&#34;&#34;
+        return self.read(size).decode(&#39;utf-8&#39;)
+
+    def read_str_xor(self, size: int, xor: int) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 XOR string from buffer.
+        &#34;&#34;&#34;
+        return bytes(list(map(lambda n: n ^ xor, list(self.read(size))))).decode(&#39;utf-8&#39;)
+
+    def read_strz(self, terminator: int = 0) -&gt; str:
+        &#34;&#34;&#34;
+        Read UTF-8 null terminated string from buffer.
+        &#34;&#34;&#34;
+        str_length = 0
+        pos = self.tell()
+        while self.read_i8() != terminator:
+            str_length += 1
+        self.seek(pos)
+        line = self.read_str(str_length)
+        self.skip(1)
+        return line
+
+    def seek(self, offset: int) -&gt; None:
+        &#34;&#34;&#34;
+        Set offset in buffer.
+        &#34;&#34;&#34;
+        self.buffer.seek(offset)
+
+    def tell(self) -&gt; int:
+        &#34;&#34;&#34;
+        Get offset from buffer.
+        &#34;&#34;&#34;
+        return self.buffer.tell()
+
+    def skip(self, count: int) -&gt; None:
+        &#34;&#34;&#34;
+        Skip bytes in buffer.
+        &#34;&#34;&#34;
+        self.seek(self.tell() + count)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="pyio.Reader.close"><code class="name flex">
+<span>def <span class="ident">close</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Close reader.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def close(self) -&gt; None:
+    &#34;&#34;&#34;
+    Close reader.
+    &#34;&#34;&#34;
+    self.buffer.close()</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read"><code class="name flex">
+<span>def <span class="ident">read</span></span>(<span>self, count: int) ‑> bytes</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read bytes from buffer.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>count</code></strong> :&ensp;<code>int</code></dt>
+<dd>Bytes count.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bytes</code></dt>
+<dd>Bytes array.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read(self, count: int) -&gt; bytes:
+    &#34;&#34;&#34;
+    Read bytes from buffer.
+
+    Args:
+        count (int): Bytes count.
+
+    Returns:
+        bytes: Bytes array.
+    &#34;&#34;&#34;
+    return self.buffer.read(count)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_i8"><code class="name flex">
+<span>def <span class="ident">read_i8</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 8-bit signed integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i8(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 8-bit signed integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(1)
+    return unpack(self.endian + &#34;b&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_i16"><code class="name flex">
+<span>def <span class="ident">read_i16</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 16-bit signed integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i16(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 16-bit signed integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(2)
+    return unpack(self.endian + &#34;h&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_i32"><code class="name flex">
+<span>def <span class="ident">read_i32</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 32-bit signed integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i32(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 32-bit signed integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(4)
+    return unpack(self.endian + &#34;i&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_i64"><code class="name flex">
+<span>def <span class="ident">read_i64</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 64-bit signed integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_i64(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 64-bit signed integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(8)
+    return unpack(self.endian + &#34;q&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_u8"><code class="name flex">
+<span>def <span class="ident">read_u8</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 8-bit unsigned integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u8(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 8-bit unsigned integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(1)
+    return unpack(self.endian + &#34;B&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_u16"><code class="name flex">
+<span>def <span class="ident">read_u16</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 16-bit unsigned integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u16(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 16-bit unsigned integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(2)
+    return unpack(self.endian + &#34;H&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_u32"><code class="name flex">
+<span>def <span class="ident">read_u32</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 32-bit unsigned integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u32(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 32-bit unsigned integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(4)
+    return unpack(self.endian + &#34;I&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_u64"><code class="name flex">
+<span>def <span class="ident">read_u64</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read 64-bit unsigned integer from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_u64(self) -&gt; int:
+    &#34;&#34;&#34;
+    Read 64-bit unsigned integer from buffer.
+    &#34;&#34;&#34;
+    buf = self.read(8)
+    return unpack(self.endian + &#34;Q&#34;, buf)[0]</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_str"><code class="name flex">
+<span>def <span class="ident">read_str</span></span>(<span>self, size: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read UTF-8 string from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_str(self, size: int) -&gt; str:
+    &#34;&#34;&#34;
+    Read UTF-8 string from buffer.
+    &#34;&#34;&#34;
+    return self.read(size).decode(&#39;utf-8&#39;)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_str_xor"><code class="name flex">
+<span>def <span class="ident">read_str_xor</span></span>(<span>self, size: int, xor: int) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read UTF-8 XOR string from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_str_xor(self, size: int, xor: int) -&gt; str:
+    &#34;&#34;&#34;
+    Read UTF-8 XOR string from buffer.
+    &#34;&#34;&#34;
+    return bytes(list(map(lambda n: n ^ xor, list(self.read(size))))).decode(&#39;utf-8&#39;)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.read_strz"><code class="name flex">
+<span>def <span class="ident">read_strz</span></span>(<span>self, terminator: int = 0) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Read UTF-8 null terminated string from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_strz(self, terminator: int = 0) -&gt; str:
+    &#34;&#34;&#34;
+    Read UTF-8 null terminated string from buffer.
+    &#34;&#34;&#34;
+    str_length = 0
+    pos = self.tell()
+    while self.read_i8() != terminator:
+        str_length += 1
+    self.seek(pos)
+    line = self.read_str(str_length)
+    self.skip(1)
+    return line</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.seek"><code class="name flex">
+<span>def <span class="ident">seek</span></span>(<span>self, offset: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set offset in buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def seek(self, offset: int) -&gt; None:
+    &#34;&#34;&#34;
+    Set offset in buffer.
+    &#34;&#34;&#34;
+    self.buffer.seek(offset)</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.tell"><code class="name flex">
+<span>def <span class="ident">tell</span></span>(<span>self) ‑> int</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get offset from buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tell(self) -&gt; int:
+    &#34;&#34;&#34;
+    Get offset from buffer.
+    &#34;&#34;&#34;
+    return self.buffer.tell()</code></pre>
+</details>
+</dd>
+<dt id="pyio.Reader.skip"><code class="name flex">
+<span>def <span class="ident">skip</span></span>(<span>self, count: int) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Skip bytes in buffer.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def skip(self, count: int) -&gt; None:
+    &#34;&#34;&#34;
+    Skip bytes in buffer.
+    &#34;&#34;&#34;
+    self.seek(self.tell() + count)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="pyio.MemoryReader" href="#pyio.MemoryReader">MemoryReader</a></code></h4>
+<ul class="two-column">
+<li><code><a title="pyio.MemoryReader.read" href="#pyio.MemoryReader.read">read</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_i8" href="#pyio.MemoryReader.read_i8">read_i8</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_i16" href="#pyio.MemoryReader.read_i16">read_i16</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_i32" href="#pyio.MemoryReader.read_i32">read_i32</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_i64" href="#pyio.MemoryReader.read_i64">read_i64</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_u8" href="#pyio.MemoryReader.read_u8">read_u8</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_u16" href="#pyio.MemoryReader.read_u16">read_u16</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_u32" href="#pyio.MemoryReader.read_u32">read_u32</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_u64" href="#pyio.MemoryReader.read_u64">read_u64</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_str" href="#pyio.MemoryReader.read_str">read_str</a></code></li>
+<li><code><a title="pyio.MemoryReader.read_strz" href="#pyio.MemoryReader.read_strz">read_strz</a></code></li>
+<li><code><a title="pyio.MemoryReader.seek" href="#pyio.MemoryReader.seek">seek</a></code></li>
+<li><code><a title="pyio.MemoryReader.tell" href="#pyio.MemoryReader.tell">tell</a></code></li>
+<li><code><a title="pyio.MemoryReader.skip" href="#pyio.MemoryReader.skip">skip</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="pyio.MemoryWriter" href="#pyio.MemoryWriter">MemoryWriter</a></code></h4>
+<ul class="two-column">
+<li><code><a title="pyio.MemoryWriter.write" href="#pyio.MemoryWriter.write">write</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_i8" href="#pyio.MemoryWriter.write_i8">write_i8</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_i16" href="#pyio.MemoryWriter.write_i16">write_i16</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_i32" href="#pyio.MemoryWriter.write_i32">write_i32</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_i64" href="#pyio.MemoryWriter.write_i64">write_i64</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_u8" href="#pyio.MemoryWriter.write_u8">write_u8</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_u16" href="#pyio.MemoryWriter.write_u16">write_u16</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_u32" href="#pyio.MemoryWriter.write_u32">write_u32</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_u64" href="#pyio.MemoryWriter.write_u64">write_u64</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_str" href="#pyio.MemoryWriter.write_str">write_str</a></code></li>
+<li><code><a title="pyio.MemoryWriter.write_strz" href="#pyio.MemoryWriter.write_strz">write_strz</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="pyio.Writer" href="#pyio.Writer">Writer</a></code></h4>
+<ul class="two-column">
+<li><code><a title="pyio.Writer.into_file" href="#pyio.Writer.into_file">into_file</a></code></li>
+<li><code><a title="pyio.Writer.write" href="#pyio.Writer.write">write</a></code></li>
+<li><code><a title="pyio.Writer.write_i8" href="#pyio.Writer.write_i8">write_i8</a></code></li>
+<li><code><a title="pyio.Writer.write_i16" href="#pyio.Writer.write_i16">write_i16</a></code></li>
+<li><code><a title="pyio.Writer.write_i32" href="#pyio.Writer.write_i32">write_i32</a></code></li>
+<li><code><a title="pyio.Writer.write_i64" href="#pyio.Writer.write_i64">write_i64</a></code></li>
+<li><code><a title="pyio.Writer.write_u8" href="#pyio.Writer.write_u8">write_u8</a></code></li>
+<li><code><a title="pyio.Writer.write_u16" href="#pyio.Writer.write_u16">write_u16</a></code></li>
+<li><code><a title="pyio.Writer.write_u32" href="#pyio.Writer.write_u32">write_u32</a></code></li>
+<li><code><a title="pyio.Writer.write_u64" href="#pyio.Writer.write_u64">write_u64</a></code></li>
+<li><code><a title="pyio.Writer.write_str" href="#pyio.Writer.write_str">write_str</a></code></li>
+<li><code><a title="pyio.Writer.write_strz" href="#pyio.Writer.write_strz">write_strz</a></code></li>
+<li><code><a title="pyio.Writer.skip" href="#pyio.Writer.skip">skip</a></code></li>
+<li><code><a title="pyio.Writer.seek" href="#pyio.Writer.seek">seek</a></code></li>
+<li><code><a title="pyio.Writer.tell" href="#pyio.Writer.tell">tell</a></code></li>
+<li><code><a title="pyio.Writer.close" href="#pyio.Writer.close">close</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="pyio.Reader" href="#pyio.Reader">Reader</a></code></h4>
+<ul class="two-column">
+<li><code><a title="pyio.Reader.close" href="#pyio.Reader.close">close</a></code></li>
+<li><code><a title="pyio.Reader.read" href="#pyio.Reader.read">read</a></code></li>
+<li><code><a title="pyio.Reader.read_i8" href="#pyio.Reader.read_i8">read_i8</a></code></li>
+<li><code><a title="pyio.Reader.read_i16" href="#pyio.Reader.read_i16">read_i16</a></code></li>
+<li><code><a title="pyio.Reader.read_i32" href="#pyio.Reader.read_i32">read_i32</a></code></li>
+<li><code><a title="pyio.Reader.read_i64" href="#pyio.Reader.read_i64">read_i64</a></code></li>
+<li><code><a title="pyio.Reader.read_u8" href="#pyio.Reader.read_u8">read_u8</a></code></li>
+<li><code><a title="pyio.Reader.read_u16" href="#pyio.Reader.read_u16">read_u16</a></code></li>
+<li><code><a title="pyio.Reader.read_u32" href="#pyio.Reader.read_u32">read_u32</a></code></li>
+<li><code><a title="pyio.Reader.read_u64" href="#pyio.Reader.read_u64">read_u64</a></code></li>
+<li><code><a title="pyio.Reader.read_str" href="#pyio.Reader.read_str">read_str</a></code></li>
+<li><code><a title="pyio.Reader.read_str_xor" href="#pyio.Reader.read_str_xor">read_str_xor</a></code></li>
+<li><code><a title="pyio.Reader.read_strz" href="#pyio.Reader.read_strz">read_strz</a></code></li>
+<li><code><a title="pyio.Reader.seek" href="#pyio.Reader.seek">seek</a></code></li>
+<li><code><a title="pyio.Reader.tell" href="#pyio.Reader.tell">tell</a></code></li>
+<li><code><a title="pyio.Reader.skip" href="#pyio.Reader.skip">skip</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
